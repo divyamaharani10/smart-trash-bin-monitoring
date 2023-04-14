@@ -1,74 +1,74 @@
-
 .formInput{
     display: flex;
     flex-direction: column;
     width: 280px;
+    margin-bottom: 5px;
+
 }
 
-input{
-    font-family: Helvetica Neue;
-    padding: 10px;
-    margin: 10px 0px;
-    border-radius: 4px;
-    border: 1px solid gray;
-}
+   input{
+        width: 322px;
+        padding: 8px;
+        margin: 10px 0px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
 
 
-label{
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    color: rgba(33, 37, 41, 1);
-}
+    label{
+        font-size: 14px;
+        font-family: Helvetica neue;
+        color: gray;
+        margin-top: 10px;
+    }
 
-span{
-    font-size: 12px;
-    padding: 3px;
-    color: red;
-    display: none;
-}
+    span{
+        font-size: 12px;
+        padding: 3px;
+        color: red;
+        display: none;
+    }
 
-input:invalid[focused="true"]{
-    border: 1px solid red;
-}
+    input:invalid[focused="true"]{
+        border: 1px solid red;
+    }
 
-input:invalid[focused="true"] ~ span{
-    display: block;
-}
+    input:invalid[focused="true"] ~ span{
+        display: block;
+    }
 
-  form{
-    margin-top: 15px;
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+form{
     background-color: white;
-    padding: 0px 60px;
+    padding: 0px 20px;
     border-radius: 10px;
-  }
-  
-  h1{
-    /* font-family: Helvetica Neue; */
-    color: rgb(14, 17, 21);
+    }
+
+
+h1{
+    font-family: Helvetica neue;
+    font-size: 26px;
+    color: rgba(48, 134, 163, 1);
     text-align: center;
-    font-size:30px;
-  }
-  
-  text{
-    font-family: Helvetica Neue;
-    text-align: center;
-    color: rgb(108, 117, 125);
-    font-size: 14px;
-  
-  }
-  
-  button{
     width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: rgba(48, 134, 163, 1)
-    ;
-    font-family: Helvetica Neue;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-  
+    font-weight: bold;
+}
+
+text{
+    font-family: Helvetica neue;
+    font-size: 16px;
+    color: #6C757D;
+    text-align: center;
+    width: 100%;
+}
+
+

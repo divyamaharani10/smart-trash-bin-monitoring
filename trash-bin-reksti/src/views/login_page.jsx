@@ -1,5 +1,7 @@
 import { useState } from "react";
 import FormInput from "./login";
+import "./login.css"
+import trelinLogo from "../assets/trelin.svg"
 
 const LoginPage = () => {
   const [values, setValues] = useState({
@@ -45,10 +47,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="app">
+    <div className="login">
+      <img src={trelinLogo} style={{ height: 68, width: 259 }} alt="Trelin logo"/>
       <form onSubmit={handleSubmit}>
-        <h1>Masuk ke Akun Anda</h1>
-        <text>Pantau dan kelola sampah secara mudah!</text>
+        <h1 margin:auto>Masuk ke Akun Anda</h1>
+        <text margin:auto>Pantau dan kelola sampah secara mudah!</text>
         {inputs.map((input) => (
           <FormInput
             key={input.id}
