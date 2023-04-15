@@ -25,7 +25,7 @@ const BinLevel = () => {
                     <text>06:30:00</text>
                 </div>
                 <div className="flex-container-row">
-                    <b>Tingkat kepenuhan</b>
+                    <b>Tingkat Kepenuhan</b>
                     <text>0%</text>
                 </div>
             </div>
