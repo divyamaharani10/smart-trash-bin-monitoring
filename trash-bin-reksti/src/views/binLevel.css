@@ -36,6 +36,22 @@
     width: 390px;
     height: 100%;
 }
+.bg-empty{
+    background-color: rgba(48, 134, 163, 1);
+
+}
+.bg-filled{
+    background-color: rgba(48, 134, 163, 1);
+
+}
+.bg-half{
+    background-color: rgba(249, 174, 43, 1);
+
+}
+.bg-full{
+    background-color: rgba(238, 120, 29, 1);
+
+}
 
 text{
     text-align: end;
@@ -53,6 +69,14 @@ b{
     justify-content: space-between;
     align-items: center;
     margin: 0px;
+}
+.flex-container-row-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    margin-left: 5px;
 }
 
 button-konfirmasi{

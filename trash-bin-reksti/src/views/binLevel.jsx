@@ -8,8 +8,13 @@ import "./binLevel.css";
 // import "./firebase"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { useNavigate } from "react-router-dom";
+
 
 const BinLevel = () => {
+
+    const navigate = useNavigate()
     // Untuk button pengangakatan sampah
     const [show1, setShow1] = useState(false);
     const handleClose1 = () => setShow1(false);
@@ -23,7 +28,10 @@ const BinLevel = () => {
         <div>
             <title>test</title>
             <div className="bin-level"> 
-                <h1>Level Sampah</h1>
+                <div className="flex-container-row-header">
+                    <ArrowBackIosIcon onClick={() => navigate('/map')}/>
+                    <h1>Level Sampah</h1>
+                </div>
                 <div className="flex-container-column">
                     <img src={binIcon} style={{ height: 280, width: 220 }} alt="bin logo"/>
                     <h1><span class="badge rounded-pill  bg-empty" data-tor="bg(rgba(0,55,210,.8))">Kosong</span></h1>
