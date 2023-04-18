@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import binIcon from "../assets/binempty.png";
+import binEmpty from "../assets/binempty.png";
+import binFilled from "../assets/binTerisi.png";
+import binHalf from "../assets/binHalf.png";
+import binFull from "../assets/binFull.png";
 // import { Badge } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./binLevel.css";
@@ -24,6 +27,40 @@ const BinLevel = () => {
     const [show2, setShow2] = useState(false);
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
+
+    //indikator penuh
+    let state = "undefined"
+    let badge = "undefined"
+    let icon = "undefined"
+
+    const levelPenuh = 92;
+
+    if (levelPenuh == 0) {
+        state = "Kosong"
+        badge = "bg-empty"
+        icon = binEmpty
+    }
+    else if (levelPenuh > 0 && levelPenuh <= 30){
+        state = "Terisi"
+        badge = "bg-filled"
+        icon = binFilled
+    }
+    else if (levelPenuh > 30 && levelPenuh <= 50){
+        state = "Setengah Penuh"
+        badge = "bg-half"
+        icon= binHalf
+    }
+    else if (levelPenuh > 50 && levelPenuh <= 90){
+        state = "Hampir Penuh"
+        badge = "bg-half"
+        icon = binHalf
+    }
+    else {
+        state = "Penuh"
+        badge = "bg-full"
+        icon = binFull
+    }
+
     return (
         <div>
             <title>test</title>
@@ -33,8 +70,8 @@ const BinLevel = () => {
                     <h1>Level Sampah</h1>
                 </div>
                 <div className="flex-container-column">
-                    <img src={binIcon} style={{ height: 280, width: 220 }} alt="bin logo"/>
-                    <h1><span class="badge rounded-pill  bg-empty" data-tor="bg(rgba(0,55,210,.8))">Kosong</span></h1>
+                    <img src={`${icon}`} style={{ height: 280, width: 220 }} alt="bin logo"/>
+                    <h1><span class={"badge rounded-pill" + ` ${badge}`}>{state}</span></h1>
                 </div>
                 <div className="flex-container-column-description">
                     <div className="flex-container-row">
@@ -47,7 +84,7 @@ const BinLevel = () => {
                     </div>
                     <div className="flex-container-row">
                         <b>Tingkat Kepenuhan</b>
-                        <text>0%</text>
+                        <text>{levelPenuh}%</text>
                     </div>
                 </div>
                 <div className="flex-container-column-button">
