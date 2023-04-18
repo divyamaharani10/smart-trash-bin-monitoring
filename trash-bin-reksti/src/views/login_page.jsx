@@ -2,22 +2,20 @@ import { useState } from "react";
 import FormInput from "./login";
 import "./login.css"
 import trelinLogo from "../assets/trelin.svg"
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [values, setValues] = useState({
     username: "",
-    email: "",
-    birthday: "",
     password: "",
-    confirmPassword: "",
   });
-
+  const navigate = useNavigate()
   const inputs = [
     {
       id: 1,
       name: "username",
       type: "text",
-      placeholder: "Username",
+      placeholder: "Masukkan Username Anda",
       errorMessage:
         "Username should be 3-16 characters and shouldn't include any special character!",
       label: "Username",
@@ -29,7 +27,7 @@ const LoginPage = () => {
       id: 2,
       name: "password",
       type: "password",
-      placeholder: "Password",
+      placeholder: "Masukkan Password Anda",
       errorMessage:
         "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
       label: "Password",
@@ -60,7 +58,7 @@ const LoginPage = () => {
             onChange={onChange}
           />
         ))}
-        <button>Masuk</button>
+        <button onClick={() => navigate('/map')}>Masuk</button>
       </form>
     </div>
   );
