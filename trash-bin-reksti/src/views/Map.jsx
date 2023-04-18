@@ -1,15 +1,12 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Map.css";
 import trashBinLogo from "../assets/tempat.png"
-import { MarginRounded, Padding } from "@mui/icons-material";
-
-
 
 function Map() {
 
-  const position = [-6.905935365864227, 107.61778320709041];
+  const position = [-6.880240916378858, 107.6045913108843];
 
   const containerStyle = {
     width: "260px",
@@ -23,20 +20,7 @@ function Map() {
     marginTop: 15,
     marginRight: 36
   };
-  // const textSectionStyle = {
-  //   position: "absolute",
-  //   bottom: "0",
-  //   left: "0",
-  //   width: "100%",
-  //   padding: "10px",
-  //   backgroundColor: "#FFF",
-  //   borderRadius: "0 0 30px 30px",
-  //   textAlign: "left",
-  //   marginLeft: 36,
-  //   fontWeight: "bold",
-  //   fontSize: 18,
-  //   font: "Helvetica Neue"
-  // };
+
   return (
     <div>
       <h1  style= {{marginTop: 80, fontWeight: "bold", font: "Inter", color: "#3086A3", textAlign: "center"}}>Pemetaan Sampah</h1>
@@ -52,24 +36,20 @@ function Map() {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position} icon={DefaultIcon}>
-              <Popup className="custom-popup">
-                Lokasi: 
-                <text style = {{font: "Inter", fontWeight: "bold"}}> GCA 2 Cimbuleuit</text>
-                < br/>Status: 
-              </Popup>
-            </Marker>
-            {/* <Link to="./tes">
-              <Marker position={position} icon={DefaultIcon}></Marker>
-            </Link> */}
+            <Link to="/level">
+              <Marker position={position} icon={DefaultIcon}>
+                <Popup className="custom-popup">
+                  Lokasi: 
+                  <text style = {{font: "Inter", fontWeight: "bold"}}> Galeri Ciumbuleuit Apartment 2</text>
+                  < br/>Status: 
+                  <text style = {{font: "Inter", fontWeight: "bold", color:"red"}}> Penuh</text>
+                </Popup>
+              </Marker>
+            </Link>
           </MapContainer>
-            {/* <div style={textSectionStyle}>
-              <p>Tempat Sampah Terkunci</p>
-              <p>Tempat Sampah Kosong</p>
-            </div> */}
-          </div>
         </div>
       </div>
+    </div>
   );
 }
 
