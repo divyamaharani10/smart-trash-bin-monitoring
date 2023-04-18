@@ -12,9 +12,8 @@ function Map() {
   const position = [-6.905935365864227, 107.61778320709041];
 
   const containerStyle = {
-    width: "318px",
-    height: "700px",
-    textAlign: "center"
+    width: "260px",
+    height: "600px",
   };
   const appStyle = {
     padding: '30px 30px 30px 30px',
@@ -40,7 +39,7 @@ function Map() {
   // };
   return (
     <div>
-      <h1  style= {{marginTop: 80, fontWeight: "bold", font: "Inter", color: "#3086A3"}}>Pemetaan Sampah</h1>
+      <h1  style= {{marginTop: 80, fontWeight: "bold", font: "Inter", color: "#3086A3", textAlign: "center"}}>Pemetaan Sampah</h1>
       <div className="App" style ={appStyle}>
         <div className="map-container" style={containerStyle}>
           <MapContainer
