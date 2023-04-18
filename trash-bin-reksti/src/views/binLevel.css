@@ -59,6 +59,13 @@ text{
     margin: 0px;
   }
 
+text-body{
+    font-size: 14px;
+    text-align: end;
+    width: fit-content;
+    margin: 0px;
+  }
+
 b{
     width: fit-content;
   }

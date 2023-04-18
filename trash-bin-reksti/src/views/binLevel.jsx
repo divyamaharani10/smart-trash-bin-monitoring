@@ -76,7 +76,7 @@ const BinLevel = () => {
                 <div className="flex-container-column-description">
                     <div className="flex-container-row">
                         <b>Lokasi</b>
-                        <text>GCA 2 Cimbuleuit</text>
+                        <text-body>-6.880177006927977, 107.6045054802044</text-body>
                     </div>
                     <div className="flex-container-row">
                         <b>Terakhir Diangkat</b>
