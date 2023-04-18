@@ -25,42 +25,48 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* display: flex;
+  place-items: center; */
+  width: 100vw;
+  height: 100vh;
 }
 
-/* h1 {
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+title{
+  font-family: Helvetica Neue;
   font-size: 32px;
   line-height: 38.4px;
-} */
-body1 {
+  margin-top: 40px;
+}
+
+text{
+  font-family: Helvetica Neue;
   font-size: 16px;
-  line-height: 1.1;
-  color: #6C757D;
+  line-height: 38.4px;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-} */
-button:hover {
-  border-color: #3086A3;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+b{
+  font-family: Helvetica Neue;
+  font-size: 16px;  
+  font-weight: bolder;
 }
 
-@media (prefers-color-scheme: light) {
+h1 {
+  font-family: helvetica neue;
+  font-size: 32px;
+  line-height: 38.4px;
+  margin-top: 40px;
+  color: #3086A3;
+  font-weight: bolder;
+}
+
+
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -71,4 +77,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+button{
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  border: none;
+  background-color: rgba(48, 134, 163, 1);
+  color: white;
+  border-radius: 5px;
+  font-family: Helvetica neue;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+
+
 }
